@@ -21,37 +21,37 @@
   },
   "somatic_snv_mnv_tar_gz":
   {
-    "path":"somatic_snv_mnv_tar_gz",
+    "path":"output/somatic_snv_mnv_tar_gz",
     "class":"File"
   },
   "somatic_cnv_tar_gz":
   {
-    "path":"somatic_cnv_tar_gz",
+    "path":"output/somatic_cnv_tar_gz",
     "class":"File"
   },
   "somatic_sv_tar_gz":
   {
-    "path":"somatic_sv_tar_gz",
+    "path":"output/somatic_sv_tar_gz",
     "class":"File"
   },
   "somatic_indel_tar_gz":
   {
-    "path":"somatic_indel_tar_gz",
+    "path":"output/somatic_indel_tar_gz",
     "class":"File"
   },
   "somatic_imputeCounts_tar_gz":
   {
-    "path":"somatic_imputeCounts_tar_gz",
+    "path":"output/somatic_imputeCounts_tar_gz",
     "class":"File"
   },
   "somatic_genotype_tar_gz":
   {
-    "path":"somatic_genotype_tar_gz",
+    "path":"output/somatic_genotype_tar_gz",
     "class":"File"
   },
   "somatic_verifyBamId_tar_gz":
   {
-    "path":"somatic_verifyBamId_tar_gz",
+    "path":"output/somatic_verifyBamId_tar_gz",
     "class":"File"
   }
 }
