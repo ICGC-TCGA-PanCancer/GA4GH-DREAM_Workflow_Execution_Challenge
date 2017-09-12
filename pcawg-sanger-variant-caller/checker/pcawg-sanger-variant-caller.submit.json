@@ -1,0 +1,18 @@
+{
+  "config_file": {
+    "class": "File",
+    "path": ".synapseConfig"
+  },
+  "team_name": "",
+  "eval_id": "",
+  "file": [
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.cnv.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.genotype.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.imputeCounts.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.indel.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.snv_mnv.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.sv.tar.gz"},
+    {"class": "File", "path": "HCC1143.csc_0-0-0.20170908.somatic.verifyBamId.tar.gz"}
+  ],
+  "parent_id": ""
+}
