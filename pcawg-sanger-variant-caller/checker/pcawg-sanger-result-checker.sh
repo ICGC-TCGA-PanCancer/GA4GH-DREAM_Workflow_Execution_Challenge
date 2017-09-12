@@ -13,8 +13,6 @@ files_to_check=(
     ["var/spool/cwl/0/pindel/HCC1143_vs_HCC1143_BL.flagged.vcf"]="*.somatic.indel.tar.gz" \
 )
 
-#less HCC1143_vs_HCC1143_BL.muts.ids.vcf.1 |perl -nae 'next if /^#/; chomp;  @F=split/\t/; print join("\t", @F[0..1, 3..10]); print "\n"' > HCC1143_vs_HCC1143_BL.muts.ids.vcf.1.eff
-
 # let's first unpack reference result files
 USAGE="Usage: $0 dir file1 file2 file3 ... fileN"
 

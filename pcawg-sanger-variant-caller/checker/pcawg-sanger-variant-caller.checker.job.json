@@ -1,0 +1,36 @@
+{
+  "reference_results_dir": {
+    "path": "reference_results",
+    "class": "Directory"
+  },
+  "result_files": [
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.cnv.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.genotype.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.imputeCounts.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.indel.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.snv_mnv.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.sv.tar.gz",
+      "class": "File"
+    },
+    {
+      "path": "HCC1143.csc_0-0-0.20170908.somatic.verifyBamId.tar.gz",
+      "class": "File"
+    }
+  ]
+}

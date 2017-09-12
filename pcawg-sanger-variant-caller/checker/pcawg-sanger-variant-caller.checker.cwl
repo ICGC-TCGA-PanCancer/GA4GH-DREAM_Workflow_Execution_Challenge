@@ -3,11 +3,11 @@ cwlVersion: v1.0
 class: CommandLineTool
 
 hints:
-  - class: DockerRequirement
-    dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker
+- class: DockerRequirement
+  dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker
 
 inputs:
-  reference_results:
+  reference_results_dir:
     type: Directory
     default: reference_results
     inputBinding:
@@ -18,7 +18,6 @@ inputs:
       items: File
     inputBinding:
       position: 2
-      glob: HCC1143.*.tar.gz
 
 outputs:
   report_file:
