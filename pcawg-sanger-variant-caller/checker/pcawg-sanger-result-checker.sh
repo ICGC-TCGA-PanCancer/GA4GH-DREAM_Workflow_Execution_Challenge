@@ -24,14 +24,18 @@ fi
 
 # unpack reference result
 reference_result_dir=$1
+mkdir -p /tmp/$reference_result_dir
 for f in `ls ${reference_result_dir}/*.tar.gz`; do
-tar xzf $f -C $reference_result_dir
+tar xzf $f -C /tmp/$reference_result_dir
 done
+
+reference_result_dir=/tmp/$reference_result_dir
 
 shift
 
 # unpack test result
-checker_temp_dir="checker_temp_dir"
+checker_temp_dir="/tmp/checker_temp_dir"
+mkdir -p checker_temp_dir
 
 [ ! -d $checker_temp_dir ] && mkdir $checker_temp_dir
 
