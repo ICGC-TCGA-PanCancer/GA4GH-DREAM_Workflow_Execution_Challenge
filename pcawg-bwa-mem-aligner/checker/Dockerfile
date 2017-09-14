@@ -13,7 +13,8 @@ USER root
 
 RUN apt-get -yqq update && \
     apt-get -yqq install apt-utils && \
-    apt-get -yqq install curl
+    apt-get -yqq install curl && \
+    apt-get -yqq install samtools
 
 RUN curl -sSL -o tmp.tar.gz --retry 10 https://github.com/ICGC-TCGA-PanCancer/GA4GH-DREAM_Workflow_Execution_Challenge/archive/bwa-mem-v1.tar.gz && \
     mkdir -p /tmp/pcawg-bwa-mem && \
