@@ -27,8 +27,8 @@ function check_md5 {
 
 flag=0
 
-if [ $(check_md5 <(samtools view -f 64 $normal_bam1) <(samtools view -f 64 $normal_bam2)) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$normal_bam2 >> checker_report.txt;flag=1;fi
-if [ $(check_md5 <(samtools view -f 64 $unmapped_bam1) <(samtools view -f 64 $unmapped_bam2)) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$unmapped_bam2 >> checker_report.txt;flag=1;fi
+if [ $(check_md5 <(/usr/bin/samtools view -f 64 $normal_bam1) <(/usr/bin/samtools view -f 64 $normal_bam2)) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$normal_bam2 >> checker_report.txt;flag=1;fi
+if [ $(check_md5 <(/usr/bin/samtools view -f 64 $unmapped_bam1) <(/usr/bin/samtools view -f 64 $unmapped_bam2)) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$unmapped_bam2 >> checker_report.txt;flag=1;fi
 if [ $(check_md5 $normal_bai1 $normal_bai2) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$normal_bai2 >> checker_report.txt;flag=1;fi
 if [ $(check_md5 $unmapped_bai1 $unmapped_bai2) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$unmapped_bai2 >> checker_report.txt;flag=1;fi
 if [ $(check_md5 $metrics1 $metrics2) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$metrics2 >> checker_report.txt;flag=1;fi
