@@ -7,17 +7,12 @@ hints:
   dockerPull: quay.io/baminou/pcawg-bwa-mem-aligner-ga4gh-result-checker:1.0
 
 inputs:
-  reference_results_dir:
-    type: Directory
-    default: reference_results
-    inputBinding:
-      position: 1
   result_files:
     type:
       type: array
       items: File
     inputBinding:
-      position: 2
+      position: 1
 
 outputs:
   report_file:
