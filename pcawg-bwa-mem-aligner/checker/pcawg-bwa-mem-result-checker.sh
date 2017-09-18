@@ -16,6 +16,7 @@ function check_md5 {
 
 flag=0
 
+echo "WWWWWWWWWW"
 echo $normal_bam1
 echo "ok"
 #/usr/bin/samtools view $normal_bam1
