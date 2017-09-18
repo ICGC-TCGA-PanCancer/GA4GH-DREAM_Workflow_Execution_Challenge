@@ -16,10 +16,7 @@ function check_md5 {
 
 flag=0
 
-echo "WWWWWWWWWW"
-echo $normal_bam1
-echo "ok"
-#/usr/bin/samtools view $normal_bam1
+/usr/bin/samtools view $normal_bam1
 exit
 
 if [ $(check_md5 <(/usr/bin/samtools view -f 64 $normal_bam1) <(/usr/bin/samtools view -f 64 $normal_bam2)) -eq 0 ];then echo "overall: false" > checker_report.txt;echo "mismatch result found in "$normal_bam2 >> checker_report.txt;flag=1;fi

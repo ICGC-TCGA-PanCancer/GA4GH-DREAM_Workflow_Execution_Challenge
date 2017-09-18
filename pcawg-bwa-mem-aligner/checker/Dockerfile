@@ -20,6 +20,8 @@ RUN apt-get -yqq update && \
 RUN wget https://raw.githubusercontent.com/ICGC-TCGA-PanCancer/GA4GH-DREAM_Workflow_Execution_Challenge/master/pcawg-bwa-mem-aligner/checker/pcawg-bwa-mem-result-checker.sh && \
     mv pcawg-bwa-mem-result-checker.sh /usr/local/bin/
 
+#COPY pcawg-bwa-mem-result-checker.sh /usr/local/bin/pcawg-bwa-mem-result-checker.sh
+
 RUN chmod a+x /usr/local/bin/pcawg-bwa-mem-result-checker.sh
 
 CMD ["/bin/bash"]
