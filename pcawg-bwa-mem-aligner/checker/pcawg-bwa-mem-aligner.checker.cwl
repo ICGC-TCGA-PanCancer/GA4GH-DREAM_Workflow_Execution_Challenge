@@ -18,7 +18,7 @@ outputs:
   report_file:
     type: File
     outputBinding:
-      glob: checker_report.txt
+      glob: checker_report.log
     doc: A text file contains report of the checker
   report_log:
     type: File
