@@ -46,7 +46,7 @@ done
 
 # now we can compare them
 mismatch=()
-:> checker_report.log
+:> log.txt
 
 for f in "${!files_to_check[@]}"; do
 
@@ -59,8 +59,8 @@ else
 fi
 
 # diff now
-echo "diff $reference_result_dir/$f.effective $checker_temp_dir/$f.effective" >> checker_report.log
-diff $reference_result_dir/$f.effective $checker_temp_dir/$f.effective >> checker_report.log 2>&1
+echo "diff $reference_result_dir/$f.effective $checker_temp_dir/$f.effective" >> log.txt
+diff $reference_result_dir/$f.effective $checker_temp_dir/$f.effective >> log.txt 2>&1
 
 rc=$?
 if [[ $rc != 0 ]]; then
@@ -70,9 +70,8 @@ fi
 done
 
 if [ "${#mismatch[@]}" -eq "0" ]; then
-    echo "overall: true" > checker_report.txt
+    echo "{\"overall\": true}" > results.json
 else
-    echo "overall: false" > checker_report.txt
-    echo "mismatch result found in: ${mismatch[@]}" >> checker_report.txt
+    echo "{\"overall\": false}" > results.json
 fi
 
