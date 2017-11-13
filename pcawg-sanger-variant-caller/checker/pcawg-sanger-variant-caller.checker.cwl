@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
 - class: DockerRequirement
-  dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker:1.0
+  dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker:2.0
 
 inputs:
   reference_results_dir:
