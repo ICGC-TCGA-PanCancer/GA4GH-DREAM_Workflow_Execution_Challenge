@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
 - class: DockerRequirement
-  dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker:1.0
+  dockerPull: quay.io/junjun_zhang/pcawg-sanger-variant-caller-ga4gh-result-checker:2.0
 
 inputs:
   reference_results_dir:
@@ -23,12 +23,12 @@ outputs:
   report_file:
     type: File
     outputBinding:
-      glob: checker_report.txt
+      glob: results.json
     doc: A text file contains report of the checker
   report_log:
     type: File
     outputBinding:
-      glob: checker_report.log
+      glob: log.txt
     doc: A log file contains additional details of checker report
 
 baseCommand: ["bash", "/usr/local/bin/pcawg-sanger-result-checker.sh"]
