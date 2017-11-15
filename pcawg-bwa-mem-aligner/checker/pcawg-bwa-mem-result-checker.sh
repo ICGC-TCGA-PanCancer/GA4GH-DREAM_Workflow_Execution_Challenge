@@ -28,14 +28,14 @@ function check_md5 {
 
 flag=0
 
-if [ $(check_md5 <(/usr/bin/samtools view -f 64 $normal_bam1) <(/usr/bin/samtools view -f 64 $normal_bam2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$normal_bam2 >> checker_report.log;flag=1;fi
-if [ $(check_md5 <(/usr/bin/samtools view -f 64 $unmapped_bam1) <(/usr/bin/samtools view -f 64 $unmapped_bam2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$unmapped_bam2 >> checker_report.log;flag=1;fi
-if [ $(check_md5 <(cat $normal_bai1) <(cat $normal_bai2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$normal_bai2 >> checker_report.log;flag=1;fi
-if [ $(check_md5 <(cat $unmapped_bai1) <(cat $unmapped_bai2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$unmapped_bai2 >> checker_report.log;flag=1;fi
-if [ $(check_md5 <(cat $normal_metrics1) <(cat $normal_metrics2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$normal_metrics2 >> checker_report.log;flag=1;fi
-if [ $(check_md5 <(cat $unmapped_metrics1) <(cat $unmapped_metrics2)) -eq 0 ];then echo "overall: false" > checker_report.log;echo "mismatch result found in "$unmapped_metrics2 >> checker_report.log;flag=1;fi
+if [ $(check_md5 <(/usr/bin/samtools view -f 64 $normal_bam1) <(/usr/bin/samtools view -f 64 $normal_bam2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$normal_bam2 >> log.txt;flag=1;fi
+if [ $(check_md5 <(/usr/bin/samtools view -f 64 $unmapped_bam1) <(/usr/bin/samtools view -f 64 $unmapped_bam2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$unmapped_bam2 >> log.txt;flag=1;fi
+if [ $(check_md5 <(cat $normal_bai1) <(cat $normal_bai2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$normal_bai2 >> log.txt;flag=1;fi
+if [ $(check_md5 <(cat $unmapped_bai1) <(cat $unmapped_bai2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$unmapped_bai2 >> log.txt;flag=1;fi
+if [ $(check_md5 <(cat $normal_metrics1) <(cat $normal_metrics2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$normal_metrics2 >> log.txt;flag=1;fi
+if [ $(check_md5 <(cat $unmapped_metrics1) <(cat $unmapped_metrics2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$unmapped_metrics2 >> log.txt;flag=1;fi
 
 if [ $flag -eq 0 ]
 then
-	echo "overall: true" > checker_report.log
+	echo "overall: true" > log.txt
 fi
