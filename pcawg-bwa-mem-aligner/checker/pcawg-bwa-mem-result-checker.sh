@@ -38,4 +38,7 @@ if [ $(check_md5 <(cat $unmapped_metrics1) <(cat $unmapped_metrics2)) -eq 0 ];th
 if [ $flag -eq 0 ]
 then
 	echo "overall: true" > log.txt
+	echo "{\"overall\": true}" > results.json
+else
+	echo "{\"overall\": false}" > results.json
 fi
