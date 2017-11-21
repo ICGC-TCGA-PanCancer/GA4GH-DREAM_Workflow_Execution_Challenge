@@ -42,3 +42,5 @@ then
 else
 	echo "{\"overall\": false}" > results.json
 fi
+
+touch test.json

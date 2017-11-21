@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
 - class: DockerRequirement
-  dockerPull: quay.io/baminou/pcawg-bwa-mem-aligner-ga4gh-result-checker:2.0
+  dockerPull: quay.io/baminou/pcawg-bwa-mem-aligner-ga4gh-result-checker:1.0
 
 inputs:
   result_files:
