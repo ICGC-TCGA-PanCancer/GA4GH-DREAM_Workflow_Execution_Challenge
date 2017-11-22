@@ -3,8 +3,8 @@
     "class": "File",
     "path": ".synapseConfig"
   },
-  "team_name": "",
-  "eval_id": "",
+  "team_name": "PCAWG-Tech",
+  "eval_id": "9606715",
   "file": [
     {"class": "File", "path": "hg19.chr22.5x.normal.bam"},
     {"class": "File", "path": "hg19.chr22.5x.normal.bam.bai"},
@@ -13,5 +13,5 @@
     {"class": "File", "path": "hg19.chr22.5x.normal.unmapped.bam.bai"},
     {"class": "File", "path": "hg19.chr22.5x.normal.unmapped.bam.metrics"}
   ],
-  "parent_id": ""
+  "parent_id": "syn11496973"
 }
