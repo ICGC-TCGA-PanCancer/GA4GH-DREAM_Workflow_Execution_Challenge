@@ -4,7 +4,7 @@ class: CommandLineTool
 
 hints:
 - class: DockerRequirement
-  dockerPull: quay.io/baminou/pcawg-bwa-mem-aligner-ga4gh-result-checker:1.0
+  dockerPull: quay.io/baminou/pcawg-bwa-mem-aligner-ga4gh-result-checker:2.0
 
 inputs:
   result_files:
@@ -15,15 +15,15 @@ inputs:
       position: 1
 
 outputs:
-  report_file:
+  stdout_log:
     type: File
     outputBinding:
-      glob: results.json
-    doc: A text file contains report of the checker
-  report_log:
+      glob: log.stdout
+    doc: File containing result
+  stderr_log:
     type: File
     outputBinding:
-      glob: log.txt
-    doc: A log file contains additional details of checker report
+      glob: log.stderr
+    doc: File containing error result
 
 baseCommand: ["bash", "/usr/local/bin/pcawg-bwa-mem-result-checker.sh"]

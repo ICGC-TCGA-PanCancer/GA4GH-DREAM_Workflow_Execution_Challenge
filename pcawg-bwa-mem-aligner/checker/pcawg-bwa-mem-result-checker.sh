@@ -35,12 +35,13 @@ if [ $(check_md5 <(cat $unmapped_bai1) <(cat $unmapped_bai2)) -eq 0 ];then echo 
 if [ $(check_md5 <(cat $normal_metrics1) <(cat $normal_metrics2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$normal_metrics2 >> log.txt;flag=1;fi
 if [ $(check_md5 <(cat $unmapped_metrics1) <(cat $unmapped_metrics2)) -eq 0 ];then echo "overall: false" > log.txt;echo "mismatch result found in "$unmapped_metrics2 >> log.txt;flag=1;fi
 
+touch log.stdout
+touch log.stderr
 if [ $flag -eq 0 ]
 then
-	echo "overall: true" > log.txt
-	echo "{\"overall\": true}" > results.json
+        echo "{\"overall\": true}" > log.stdout
+        exit 0
 else
-	echo "{\"overall\": false}" > results.json
+        echo "{\"overall\": false}" >> log.stderr
+        exit 1
 fi
-
-touch test.json
